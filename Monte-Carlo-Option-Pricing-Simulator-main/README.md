@@ -72,5 +72,3 @@ $$
 
 All parameters are labeled and visualized in the plot.
 
-## License
-MIT
