@@ -1,72 +1,62 @@
+
 # Monte Carlo Option Pricing Simulator
 
-## What is this project about?
-This project is a professional simulator for pricing European Call and Put options using Monte Carlo methods. It simulates stock price paths with Geometric Brownian Motion, compares Monte Carlo prices to Black-Scholes analytical prices, and visualizes the results with animated plots. Designed for finance, education, and research.
+A Python project that estimates the prices of European Call and Put options using Monte Carlo simulation and compares them with the Black-Scholes model.
 
+## About the Project
 
+This project simulates different possible stock price movements to understand how option prices can change over time. It uses Geometric Brownian Motion (GBM) to generate stock price paths and calculates option prices based on the simulation results.
+
+It also shows animated plots to make the results easier to understand.
 
 ## Features
-- Simulate stock price paths using GBM
-- Price European Call and Put options via Monte Carlo
-- Calculate Black-Scholes analytical price
-- Visualize animated stock price paths and option prices
-- Clean, professional dark theme
+
+- Simulates stock prices using GBM.
+- Calculates European Call and Put option prices.
+- Compares results with Black-Scholes prices.
+- Displays stock price movements and pricing results through plots.
+- Includes adjustable pricing parameters.
+
+## Tech Stack
+
+- Python
+- NumPy
+- Matplotlib
+- SciPy
 
 ## Project Structure
-- `main.py`: Entry point, handles simulation, visualization, and comparison
-- `utils.py`: Contains GBM simulation and pricing functions
-- `requirements.txt`: Python dependencies
-- `README.md`: Project documentation and formulas
 
-## Formulas
+- `main.py` – Runs the simulation and displays the results.
+- `utils.py` – Contains the simulation and pricing functions.
+- `requirements.txt` – Lists the required Python packages.
+- `README.md` – Project documentation.
 
-### Geometric Brownian Motion (GBM)
-Stock price evolution:
-$$
-S_t = S_0 \exp\left((r - 0.5\sigma^2)t + \sigma W_t\right)
-$$
-Where:
-- $S_t$: Stock price at time $t$
-- $S_0$: Initial stock price
-- $r$: Risk-free rate
-- $\sigma$: Volatility
-- $W_t$: Wiener process (Brownian motion)
+## How to Run
 
-### Black-Scholes Formula
-European Call:
-$$
-C = S_0 N(d_1) - K e^{-rt} N(d_2)
-$$
-European Put:
-$$
-P = K e^{-rt} N(-d_2) - S_0 N(-d_1)
-$$
-Where:
-$$
-d_1 = \frac{\ln(S_0/K) + (r + 0.5\sigma^2)t}{\sigma\sqrt{t}}
-$$
-$$
-d_2 = d_1 - \sigma\sqrt{t}
-$$
-- $N(\cdot)$: Cumulative distribution function of the standard normal distribution
-- $K$: Strike price
-- $t$: Time to maturity
+Install the required packages:
 
-## Usage
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Run the simulator:
-   ```bash
-   python main.py
-   ```
+```bash
+pip install -r requirements.txt
+```
+
+Run the simulator:
+
+```bash
+python main.py
+```
 
 ## Parameters
-- Strike price
-- Volatility
-- Risk-free rate
-- Time to maturity
 
-All parameters are labeled and visualized in the plot.
+You can adjust the strike price, volatility, risk-free rate, and time to maturity to see how they affect option prices.
+
+## What I Learned
+
+- Basics of Monte Carlo simulation.
+- Simulating stock price movements using GBM.
+- Understanding European options and the Black-Scholes model.
+- Comparing simulated prices with theoretical prices.
+- Visualizing financial data using Python.
+
+
+
 
